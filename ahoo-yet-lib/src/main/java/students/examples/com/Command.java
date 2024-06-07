@@ -1,5 +1,5 @@
 package students.examples.com;
 
-public interface Commad {
+public interface Command {
     public CommandType getType();
 }

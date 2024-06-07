@@ -20,7 +20,8 @@ public class VaccumCleanerApp {
   ;
     public static void main(String[] args) throws IOException, ClassNotFoundException {
     log.info("Starting logs");
-        VaccumCleaner vaccumCleaner = new VaccumCleaner();
+        VaccumCleaner vaccumCleaner = new VaccumCleaner(1,"Atom");
+        System.out.println(vaccumCleaner);
 
         log.info(String.format("%b",vaccumCleaner.isOn()));
 

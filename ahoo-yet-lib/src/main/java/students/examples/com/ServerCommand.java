@@ -2,7 +2,7 @@ package students.examples.com;
 
 import java.io.Serializable;
 
-public class ServerCommand implements Commad, Serializable {
+public class ServerCommand implements Command, Serializable {
     private static final long serialVersionUID = 1L;
 
     private CommandType type;
