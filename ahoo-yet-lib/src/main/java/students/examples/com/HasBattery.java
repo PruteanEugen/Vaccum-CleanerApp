@@ -7,4 +7,7 @@ public interface HasBattery {
 
     public int getCharge();
     public void setCharge(int charge);
+
+    public boolean switchOn();
+    public boolean switchOff();
 }

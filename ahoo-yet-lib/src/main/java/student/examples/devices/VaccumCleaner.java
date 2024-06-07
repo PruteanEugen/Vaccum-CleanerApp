@@ -87,3 +87,4 @@ public class VaccumCleaner extends Device implements HasPowerStates, HasBattery 
                 '}';
     }
 }
+

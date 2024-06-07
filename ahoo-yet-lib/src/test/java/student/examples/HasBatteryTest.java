@@ -47,6 +47,6 @@ public class HasBatteryTest {
             hasBattery.disCharge();
         }
         Assert.assertEquals(0,hasBattery.getCharge());
+    }
 }
-}
-
+//TODO write a test that will test switchON switchOFF of your device
