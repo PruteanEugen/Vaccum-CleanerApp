@@ -30,7 +30,12 @@ public class VaccumCleaner extends Device implements HasPowerStates, HasBattery 
     }
 
     public void setCharge(int charge) {
-        this.charge = charge;
+        if(charge >= 0 && charge <= 100) {
+            this.charge = charge;
+        }else {
+            System.out.println("Charge must be between 0 and 100");
+        }
+
     }
 
     @Override

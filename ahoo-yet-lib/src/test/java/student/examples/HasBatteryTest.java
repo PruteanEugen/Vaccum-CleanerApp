@@ -7,19 +7,18 @@ import student.examples.devices.VaccumCleaner;
 import students.examples.com.HasBattery;
 
 public class HasBatteryTest {
-    final int MINIMAL_TARGET = 0;
+
     private  HasBattery hasBattery;
 
     @BeforeEach
     public void setup(){
         hasBattery = new VaccumCleaner(1,"Atom");
+        hasBattery.setCharge(50);
     }
     @Test
     public void testOverCharge(){
 
         final int TARGET_CHARGE = 100;
-
-
 
         int chargeBefore = hasBattery.getCharge();
         hasBattery.charge();
@@ -35,14 +34,14 @@ public class HasBatteryTest {
     }
     @Test
     public void underDischarge(){
-
+        final int MINIMAL_TARGET = 0;
 
         int dischargeBefore = hasBattery.getCharge();
         hasBattery.disCharge();
         int dischargeAfter = hasBattery.getCharge();
         int deltaDischarge = dischargeBefore - dischargeAfter;
         int steps = (MINIMAL_TARGET + dischargeAfter)/ deltaDischarge;
-                steps++;
+        steps++;
 
         while (steps-- != 0){
             hasBattery.disCharge();
